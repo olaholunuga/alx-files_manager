@@ -6,7 +6,7 @@ class RedisClient {
     const client = createClient();
     client.on(
       'error',
-      (err) => console.log(err),
+      (err) => console.log(err.message),
     );
   }
 
@@ -33,4 +33,4 @@ class RedisClient {
 
 const redisClient = new RedisClient();
 
-export default redisClient;
+module.exports = redisClient;
